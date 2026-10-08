@@ -1,0 +1,4 @@
+Write a program that prints:
+Name: Abdellah
+Age: 17
+Learning: C
