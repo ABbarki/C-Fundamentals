@@ -1,0 +1,4 @@
+Exercise 1: Create variables for
+age
+height
+university grade
