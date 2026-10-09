@@ -1,0 +1,4 @@
+Exercises
+Build:
+Age calculator
+Celsius → Fahrenheit converter
