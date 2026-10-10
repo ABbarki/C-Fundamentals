@@ -1,0 +1,51 @@
+Command-Line:
+Don't make it a real hacking tool.
+Make it a safe programming project that combines everything you've learned.
+When you run:
+=========================
+      C CYBER TOOLKIT
+=========================
+
+1. System Information
+2. Number Analyzer
+3. Password Strength Demo
+4. Calculator
+5. Exit
+
+Choose:
+_________________________________________________________________________________
+1 — System Information:
+Ask the user:
+Name: Abdellah
+Age: 17
+Favorite OS: Linux
+Then display it.
+_________________________________________________________________________________
+2 — Number Analyzer:
+User enters a number:
+Enter number: 42
+
+Even: YES
+Positive: YES
+Digits: 2
+Use:
+- variables
+- operators
+- if
+- loops
+_________________________________________________________________________________
+3 — Password Strength Demo:
+Ask for a dummy string and eventually you'll learn strings properly in Level 2.
+Password score:
+
+1 → Weak
+2 → Medium
+3 → Strong
+__________________________________________________________________________________
+4 — Calculator
+Menu:
+1. +
+2. -
+3. *
+4. /
+__________________________________________________________________________________
