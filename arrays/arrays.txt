@@ -1,0 +1,121 @@
+An array in C is a variable that stores multiple values of the same data type under one name. Instead of creating separate variables for every value, you can store several values in one array.
+For example, instead of writing int a = 10;, int b = 20;, and int c = 30;, you can create one array to store all three numbers.
+1. Creating an Array
+To create an array in C, write the data type, the array name, and the number of elements inside square brackets.
+Example:
+int numbers[5] = {10, 20, 30, 40, 50};
+
+
+In this example, int is the data type, numbers is the array name, and [5] means the array can store five integers. The values inside the curly braces are the initial elements of the array.
+2. Array Indexes
+In C, array indexes start at zero, not one. The first element has index 0, the second has index 1, and so on.
+For an array containing five elements, the indexes are 0, 1, 2, 3, and 4.
+You can access an element by writing the array name followed by its index inside square brackets.
+Example:
+printf("%d\n", numbers[0]);
+printf("%d\n", numbers[2]);
+
+
+The first statement prints 10, and the second prints 30.
+Remember that numbers[5] is invalid for an array of five elements because its last valid index is 4. Accessing an element outside the array's bounds causes undefined behavior.
+3. Changing Array Elements
+You can change the value of an element by assigning a new value to its index.
+Example:
+int numbers[3] = {10, 20, 30};
+
+numbers[1] = 99;
+
+
+After this assignment, the array contains 10, 99, and 30. The value at index 1 changes from 20 to 99.
+4. Using a For Loop with Arrays
+A for loop allows you to access every element of an array without writing a separate statement for each element.
+Example:
+#include <stdio.h>
+
+int main(void)
+{
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d\n", numbers[i]);
+    }
+
+    return 0;
+}
+
+
+The loop starts with i = 0. It continues while i < 5, and i++ increases the index by one after each iteration. The expression numbers[i] accesses the current element.
+The program prints all five numbers, one per line.
+5. Getting Array Values from the User
+You can use scanf() to allow the user to enter values for an array.
+Example:
+#include <stdio.h>
+
+int main(void)
+{
+    int numbers[5];
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("Enter number %d: ", i + 1);
+        scanf("%d", &numbers[i]);
+    }
+
+    printf("Your numbers are:\n");
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d\n", numbers[i]);
+    }
+
+    return 0;
+}
+
+
+The first loop asks the user to enter five numbers and stores each number in the array. The second loop prints all the stored values.
+The expression &numbers[i] gives scanf() the address where the entered integer should be stored.
+6. Calculating the Sum of an Array
+Arrays are useful for performing calculations, such as finding the sum or average of several numbers.
+Example:
+#include <stdio.h>
+
+int main(void)
+{
+    int numbers[5] = {10, 20, 30, 40, 50};
+    int sum = 0;
+
+    for (int i = 0; i < 5; i++)
+    {
+        sum += numbers[i];
+    }
+
+    printf("Sum: %d\n", sum);
+
+    return 0;
+}
+
+
+The variable sum starts at zero. The loop visits each element and adds its value to sum. The final result is 150.
+The statement sum += numbers[i] is a shorter way of writing sum = sum + numbers[i].
+7. Arrays of Characters
+You can also create arrays of characters using the char data type. Character arrays are commonly used to store strings.
+Example:
+#include <stdio.h>
+
+int main(void)
+{
+    char name[] = "Adam";
+
+    printf("%s\n", name);
+
+    return 0;
+}
+
+
+The program prints Adam. The %s format specifier tells printf() to print a string.
+In C, a string is a sequence of characters terminated by a special null character, written as '\0'. When you initialize a character array with a string literal, C automatically includes this terminating character in the array.
+8. Common Array Mistakes
+One common mistake is accessing an index outside the array's valid range. For example, an array with five elements has indexes from 0 to 4, not 1 to 5.
+Another mistake is forgetting to initialize a variable used for calculations. For example, int sum = 0; ensures that the sum starts at zero before the loop adds any values.
+You should also remember that ordinary arrays have a fixed size once declared, and their elements have the same declared data type. Finally, when using scanf() to read an integer into an array element, use &numbers[i] to provide its address.
